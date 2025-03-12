@@ -1,0 +1,1215 @@
+/* reset osnovnih stilova */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    /*css varijable*/
+    --bg-color: white;
+    --text-color: black;
+    --primary-color: #16161D;
+    --font-main: "Wix Madefor Text";
+    --font-display: "Wix Madefor Display";
+    --font-accent: 'Lexend', sans-serif;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+.header {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.logo {/*iz figme*/
+    margin-left: 6rem;
+    margin-top: 1.69rem;
+    margin-bottom: 1rem;
+    width: 6.1875rem;
+    height: 6.1875rem;
+}
+.navbar-nav {
+    margin-right: 1.88rem;
+    gap: 1rem;
+}
+.nav-link {/*iz figme*/
+    color: var(--primary-color);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+}
+.nav-link:hover {color: #ff3700;}
+.navbar-collapse { /*da je uvijek vidljiv*/
+    z-index: 1000;
+    background-color: var(--bg-color);
+}
+.navbar-toggler {/*posto smo postavili novu ikonicu, uklanjamo border koji je postojao po defoltu*/
+    border: none;
+    padding: 0;
+  }
+/*---------------------------------------------------------------------------------------------------------------*/
+.hero-section {
+    width: 100%;
+    padding-top: 12rem;
+    height: auto;
+    background-color: #fff;
+    position: relative; /*relative, da bi se kasnije koristio absolute za rectangle i slike*/
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.rectangleLijevo {
+    width: clamp(10rem, 20vw, 302px);
+    height: clamp(13rem, 30vw, 409px);
+    background: linear-gradient(180deg, #A8D8FF 0%, #F9E4FF 100%);
+    border-radius: 0 80px 80px 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero-img.left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: clamp(8rem, 20vw, 302px);
+    height: auto;
+    z-index: 2;
+}
+
+.rectangleDesno {
+    width: clamp(10rem, 20vw, 285px);
+    height: clamp(13rem, 30vw, 409px);
+    background: linear-gradient(180deg, #FDE3A7 0%, #FAD1D1 100%);
+    border-radius: 80px 0 0 80px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero-img.right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: clamp(8rem, 20vw, 285px);
+    height: auto;
+    z-index: 2;
+}
+
+.hero-size {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: clamp(2.4rem, 5vw, 3.875rem);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.mark1{
+    background: linear-gradient(92deg, #FF9532 57%, #FE5A69 72%, #F657BC 88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: clamp(2.4rem, 5vw, 3.875rem);
+    font-weight: 700;
+}
+.gradient-text {
+    background: linear-gradient(92deg, #FF9532 57%, #FE5A69 72%, #F657BC 88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: clamp(2.4rem, 5vw, 3.875rem);
+    font-weight: 700;
+}
+
+
+.hero-subtitle {
+    color: var(--Text-Color, --primary-color);
+    text-align: center;
+    font-family: var(--font-accent);
+    font-size: clamp(0.8rem, 3vw, 1.125rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem;
+}
+
+/* Search Container */
+.search-links-container {
+    max-width: 43.75rem;
+    margin-left: auto;
+    padding-bottom: 4rem;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #FF5A89;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex-grow: 1;
+    width: 65%;
+    height: 3%;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-suffix {
+    background-color: #F9F9F9;
+    padding: 15px 20px;
+    font-family: Sloth;
+    font-size: clamp(0.8rem, 2.2vw, 1.45rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.search-button {
+    background-color: #FF2672;
+    width: 35%;
+    color: var(--bg-color);
+    border: none;
+    padding: 15px 45px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-size: clamp(0.8rem, 2.2vw, 1.29rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.0125rem;
+}
+
+.search-links {
+    background-color: #f9f9f9;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.search-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--font-accent);
+    font-size: clamp(0.3rem, 1.7vw, 0.875rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.search-links img {
+    vertical-align: middle;
+}
+
+/*--------------------------------------------------------------------------------*/
+.meFor {
+    width: 90%;
+    max-width: 1440px;
+    margin: 5rem auto;/* 5rem top i bottom, auto lijevo i desno */
+}
+
+.section-titleCard {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 3.875rem);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 4.25rem;
+    letter-spacing: -0.03875rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.highlight {/*iz figme*/
+    background: linear-gradient(89deg, #FF9532 9.32%, #FE5A69 19.94%, #EF4FB5 31.33%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.custom-gutters {/*za razmak izmedju kartica, da ne bude fiksan kao ranije gx-5, gy-5*/
+    --gutter-x: clamp(1rem, 3vw, 3rem);
+    --gutter-y: clamp(1rem, 3vw, 3rem);
+    margin-top: calc(-1 * var(--gutter-y)); /*koristi se minus kako bi se uklonile vrijednosti koje boostrap vec ima definisano*/
+    margin-right: calc(-.5 * var(--gutter-x));
+    margin-left: calc(-.5 * var(--gutter-x));
+  }
+  
+.custom-gutters > * { /*primijeni na sve elemente*/
+    padding-right: calc(var(--gutter-x) * .5);
+    padding-left: calc(var(--gutter-x) * .5);
+    margin-top: var(--gutter-y);
+}
+  
+.custom-card-ME {
+    width: 100%;
+    aspect-ratio: 1;/*da dobijemo kvadratni oblik, da je jednaka visina i sirina*/
+    border-radius: 15px;
+    padding: 1.25rem;
+    position: relative;
+    color: var(--text-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /*za tekst i ovu dole strelicu*/
+}
+
+.custom-card-ME h4 {
+    font-size: clamp(1rem, 2vw, 1.6rem);
+    max-width: 80%;
+    font-family: var(--font-main);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.875rem;
+}
+
+.half-h4 {max-width: 50% !important; /*zbog teksta na pojedinim karticama*/}
+
+.custom-card-ME img {
+    width: 85%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*dodatno prilagodjavanje jer nijesu sve slike iste velicine*/
+#students-photo {width: 80%;}
+#designers-photo {width: 90%;}
+#last-image {width: 80%;}
+
+.vector-icon {
+    max-width: 1.25rem;
+    height: auto;
+    position: relative;
+    margin-top: auto;
+    margin-left: 0.5rem;
+    bottom: auto;
+    left: auto;
+}
+
+.bg-startups {background: url(images/111.png) lightgray -3.242px -3.33px / 102.413% 102.394% no-repeat;}
+.bg-corporations {background: linear-gradient(195deg, #FF7182 20%, #FFC454 80%);}
+.bg-creative {background: linear-gradient(135deg, #71D7FF 0%, #C68AFF 33%, #FFB8C3 66%, #FFFFFF 100%);}
+.bg-students {background: linear-gradient(135deg, #98E8CD 0%, #F7D147 50%, #F8B8CE 100%);}
+.bg-designers {background: linear-gradient(to right, #6FE8D6, #F1D647, #FFE1D8);}
+.bg-artists {background: linear-gradient(to right, #E8B0F6, #C5DFFF, #7AE3E1, #D3A0FA, #CC96FE);}
+.bg-devs {background: linear-gradient(45deg, #8EE5FB, #FFEB81, #EC75D7, #FFA492);}
+.bg-photographers {background: linear-gradient(195deg, #FFC454 20%, #FF7182 80%);}
+/*-------------------------------------------------------------------------------------------------------*/
+.why {
+    width: 90%;
+    max-width: 1440px;
+    margin: 5rem auto;/* 5rem top i bottom, auto lijevo i desno */
+}
+
+.why-section-title {/*iz figme*/
+    text-align: left;
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 4.2vw, 3.875rem);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 2.4625rem;
+}
+
+.h4-new {/*iz figme*/
+    color: var(--primary-color);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: var(--font-main);
+    font-size: clamp(1rem, 4vw, 2rem);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.625rem;
+}
+
+.feature-item {
+    margin-top: 1.25rem;
+    text-align: left;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+.make-a-mark {
+    width: 90%;
+    max-width: 1440px;
+    margin: 5rem auto;
+    padding: 2rem 0;
+}
+
+.highlight-text {/*iz figme*/
+    color: var(--primary-color);
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.875rem);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 4.25rem;
+    letter-spacing: -0.03875rem;
+}
+
+.gradient-text {/*kopirano iz figme*/
+    font-size: clamp(2.4rem, 5vw, 3.875rem);
+    background: linear-gradient(78deg, #FF9532 9.83%, #FE5A69 15.82%, #F657BC 22.24%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.dot-highlight{
+    color: transparent; /*da se trenutno ne prikaze ova tacka, kasnije na malim ekranima se prikazuje!*/
+}
+
+.text-muted {
+    color: var(--primary-color);
+    font-family: var(--font-accent);
+    font-size: clamp(0.8rem, 2vw, 1.125rem);
+    line-height: 1.625;
+    max-width: 90%;
+    margin-top: 1rem;
+}
+
+/* Search Container */
+.search-links-container1 {
+    max-width: 43.75rem;
+    margin-left: auto;
+}
+
+/* unutrasnji kontejner 1 */
+.search-container1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #FF5A89;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-input1 {
+    flex-grow: 1;
+    width: 65%;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    font-size: clamp(0.8rem, 2.2vw, 1.25rem);
+}
+
+.search-suffix1 {
+    background-color: #F9F9F9;
+    padding: 15px 20px;
+    font-family: Sloth;
+    font-size: clamp(0.8rem, 2.2vw, 1.25rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.search-button1 {
+    background-color: #FF2672;
+    color: var(--bg-color);
+    border: none;
+    width: 35%;
+    padding: 15px clamp(25px, 2vw, 45px);
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-size: clamp(0.8rem, 2.2vw, 1.27rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.0125rem;
+}
+
+/* unutrasnji kontejner 2 */
+.search-links1 {
+    background-color: #f9f9f9;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.search-links1 a {
+    color: var(--primary-color);
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--font-accent);
+    font-size: clamp(0.75rem, 1.7vw, 0.9275rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.search-links1 img {
+    vertical-align: middle;/*da se poravna sa tekstom*/
+}
+
+/*--------------------------------------------------------------------------*/
+.successContainer {
+    width: 90%;
+    max-width: 1440px;
+    margin: clamp(2rem, 5vw, 5rem) auto;
+    padding: clamp(1rem, 2vw, 2rem) 0;
+}
+
+.success-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.875rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+    padding: 0 1rem;
+}
+
+.card {
+    border-radius: clamp(0.5rem, 2vw, 1.25rem) !important;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+.card-body {
+    padding: clamp(0.75rem, 3vw, 1.25rem);
+    display: flex;
+    flex-direction: column;
+    min-height: clamp(180px, 30vw, 200px);
+}
+
+.gradient-bg-1 {background: linear-gradient(135deg, #71D7FF, #C68AFF, #FFB8C3) !important;}
+.gradient-bg-2 {background: linear-gradient(135deg, #FDCB6E, #FDA7DF, #D980FA) !important;}
+.gradient-bg-3 {background: radial-gradient(circle, #A8E6CF, #FFD3B6, #FFAAA5) !important;}
+
+.text-brand {
+    color: var(--primary-color);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: var(--font-main);
+    font-size: clamp(0.8rem, 2vw, 1.125rem);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.card-title {
+    font-family: var(--font-main);
+    font-size: clamp(1.2rem, 2vw, 1.75rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: -0.0175rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.explore {
+    color: var(--primary-color);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: var(--font-main);
+    font-size: clamp(1rem, 3vw, 1.375rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; /* Fixed from 4.875rem which was too large */
+    align-self: flex-start;
+    margin-top: clamp(1.7rem, 3vw, 2rem);
+}
+
+.more-stories {
+    color: #F91567;
+    font-family: var(--font-accent);
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.375rem;
+    text-decoration-line: underline;
+    display: inline-block;
+    margin-top: clamp(1.5rem, 3vw, 2rem);
+}
+
+  
+/*--------------------------------------------------------------------------------------------------*/
+.desktopFooter {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+}
+
+.cards-container {
+    margin-bottom: -12.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.custom-card {
+    width: clamp(12rem, 100%, 18rem); 
+    max-width: 100%; 
+    height: clamp(13rem, 50vh, 21rem); 
+    padding: clamp(0.8rem, 2vw, 1.09rem); 
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card-image {
+    height: clamp(8rem, 27vh, 55%);
+    border-radius: 10px;
+    background-image: url('images/footer1.png'); /*jedino ova kartica ima sliku */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; /* centriranje teksta unutar slike */
+    align-items: center;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+}
+.one {background: linear-gradient(135deg, #71D7FF, #C68AFF, #FFB8C3);}
+.two {background: linear-gradient(135deg, #FFC454, #FF7182);}
+.three {background: linear-gradient(135deg, #71D7FF, #FFC454, #FF7182);}
+
+.custom-card-title {
+    color: #26262B;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 2.5vw, 1.58706rem); 
+    font-weight: 400;
+    line-height: clamp(1.2rem, 3vw, 1.70744rem); 
+    padding: clamp(0.5rem, 2vw, 1.3rem);
+}
+
+.custom-card-title2 {
+    color: #26262B;
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 2.5vw, 1.58706rem);
+    font-weight: bold;
+}
+
+.custom-card-text {
+    color: var(--primary-color);
+    font-family: var(--font-accent);
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+}
+
+.custom-button {
+    display: flex;
+    width: clamp(6rem, 15vw, 8.05144rem); 
+    height: clamp(2rem, 8vh, 2.95638rem); 
+    padding: clamp(0.3rem, 1vw, 0.50319rem); 
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+.footer {
+    background: #F5F5F5;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    padding-top: 9.5rem;
+    position: relative;
+    z-index: 0;
+}
+
+.footer-row-2 {
+    margin-top: 5.75rem;
+    margin-bottom: 5.75rem;
+}
+
+.footer-logo {
+    width: 5.4375rem;
+    height: 5.4375rem;
+    margin-bottom: 2rem;
+}
+
+.ptext {
+    color: var(--primary-color);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.375rem;
+}
+
+.subscribe-input {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: clamp(4px, 2vw, 8px) clamp(7px, 3vw, 15px);
+    width: 65%;
+    margin-right: clamp(0.2rem, 1vw, 1rem);
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.subscribe-btn {
+    border-radius: 10px;
+    background-color: #ff3860;
+    color: #fff;
+    width: 35%;
+    padding: clamp(4px, 2vw, 8px) clamp(5px, 3vw, 10px);
+    border: none;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+.footer-links a {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    margin-right: 3rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footerLink {
+    color: #333;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/*----------------------------------RESPONSIVE---------------------------------------------------------------------*/
+
+@media screen and (max-width: 2560px){
+    .search-links-container{margin: 0 auto;}
+}
+/*------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1440px){
+    .rectangleLijevo, .rectangleDesno {min-height: 440px;}
+    .hero-img.left, .hero-img.right{min-height: 340px;}
+    #designers-photo{width: 80%;}
+    #last-image{width: 75%;}
+    .more-stories{font-size: 1.2rem;}
+}
+/*------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1024px) {
+    .logo {
+        margin-left: 4rem;
+        width: 5.1875rem;
+        height: 5.1875rem;
+    }
+    .hero-section{padding-top: 5rem;}
+    .rectangleLijevo, .rectangleDesno {min-height: 340px;}
+    .search-links-container{padding-bottom: 3rem;}
+    /*-----------------*/
+    .custom-card-ME img {width: clamp(60%, 70%, 75%);}
+    .custom-card-ME h4 {
+      font-size: clamp(1.3rem, 1.3vw, 1.5rem);
+      max-width: 70%;
+    }
+    .half-h4 {max-width: 40% !important;}
+    #students-photo, #last-image {width: 70%;}
+    #designers-photo {width: 70%;}
+    /*---------------------------*/
+    .cards-container {margin-bottom: -9.5rem;}
+    .custom-card {
+        height: 18rem; 
+        padding: 1rem; 
+        margin-bottom: 1rem;
+    }
+    .card-image {height: 45%;}
+    .custom-card-title {
+        font-size: 1.2rem;
+        line-height: 1.2rem
+    }
+    .custom-card-title2 {font-size: 1.2rem;}
+    .custom-card-text {font-size: 0.8rem;}
+    .custom-button {padding: 0.1rem;}
+    /*----*/
+    .footerLink{margin-right: 1rem;}
+}
+/*----------------------------------------------------------------------------------------------------*/  
+@media (max-width: 991px) { /*za navbar*/
+    .header {height: auto;}
+    .logo {
+        margin-left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 4rem;
+        height: 4rem;
+    }
+    .navbar-nav {
+        margin-right: 0;
+        padding: 1rem 0;
+    }
+    .nav-link {padding: 0.5rem 1rem;}
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 1px solid #e0e0e0;
+    }
+}
+/*----------------------------------------------------------------------------------------------------*/ 
+
+@media (max-width: 768px){
+
+    .hero-section .row {
+        flex-direction: row;
+        flex-wrap: wrap; /*prelamanje elemenata */
+    }
+
+    /* lijeva slika i rectangle */
+    .hero-section .col-6:nth-child(1) { /*prvi element (dijete) koji ima ovu klasu*/
+        margin-top: 19rem;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: relative;
+        order: 1;
+    }
+
+    /* desna slika i rectangle */
+    .hero-section .col-6:nth-child(3) {
+        margin-top: 19rem;
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: relative;
+        order: 2;
+    }
+
+    /* search polje */
+    .hero-section .col-12 {
+        width: 100%;
+        margin-top: 1rem;
+        order: 3;
+    }
+
+    .rectangleLijevo, .rectangleDesno {
+        min-height: 360px; 
+        width: 85%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .rectangleLijevo {
+        left: 0;
+        border-radius: 0 40px 40px 0;
+        
+    }
+    
+    .rectangleDesno {
+        right: 0;
+        border-radius: 40px 0 0 40px;
+    }
+
+    .hero-img.left, .hero-img.right {
+        width: 85%;
+        max-width: 100%;
+        max-height: 390px;
+        margin-bottom: 0;
+        position: absolute; 
+        bottom: 0; 
+        z-index: 2; 
+    }
+    .hero-img.left {right: 0;}
+    .hero-img.right {left: -2; /* kad je nula, malo je ulijevo*/}
+    .hero-title{font-size: 4rem;}
+    .gradient-text{font-size: 4rem;}
+
+    /*search container */
+    .search-links-container {
+        margin-left: 1.5rem;
+        margin-top: 2rem;
+    }
+    .search-container {width: 100%;}
+    .search-input {width: 65%;}
+    .search-button {width: 35%;}
+    /*------------------------*/
+    .section-titleCard{font-size: 3.5rem;}
+    /**/
+    .custom-card-ME h4 {
+        font-size: clamp(1.7rem, 4vw, 2.2rem);
+        padding-top: 0.3rem;
+        line-height: 1.85rem;
+    }
+    .why-section-title{font-size: 3rem;}
+    .subscribe-btn{font-size:0.8rem;}
+
+    .make-a-mark .gradient-text{font-size: 2.4rem;}
+    .success-title{font-size: 3rem;}
+
+    .card-body {padding: 0.7rem;}
+    .card-title {font-size: 1.1rem;}
+    .explore{
+        margin-top: 0.2rem;
+        font-size: 1rem;
+    }
+    .cards-container{
+        background-color: var(--bg-color);
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        margin-bottom: -20rem;
+        padding: 0.6rem;
+        position: relative;
+        z-index: 1;
+    }
+    .card-image {height: 55%;}
+    
+    .footer-row-2{margin-top: 20rem;}
+    .social-icons a{
+        font-size: 23px;
+        margin: 0 5px;
+    }
+}
+/*------------------------------------------------------------------------------------------*/
+@media (max-width: 426px){
+
+    .logo{
+        width: 3.6875rem;
+        height: 3.6875rem;
+    }
+
+    .hero-section{
+        min-height: auto; 
+        padding-bottom: 2rem;
+    }
+
+    .hero-section .col-6:nth-child(1),
+    .hero-section .col-6:nth-child(3) {
+        margin-top: 1rem !important; /*da bi se smanjila velika margina jer je ispod definisano da je veca za dio ekrana od 768px do 425px*/
+        height: 200px;
+    }
+
+    .hero-img.left, .hero-img.right {
+        max-height: 180px;
+        width: 90%;
+        bottom: 0;
+    }
+
+    .rectangleLijevo, .rectangleDesno {
+        margin-left: 0rem;
+        min-height: 280px;
+        height: 160px;
+        width: 90%;
+    }
+
+    .hero-size{width: 100%;}
+    .hero-title{
+        margin-top: 1.91rem;
+        text-align: start;
+        font-size: 2.875rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 103%
+    }
+    .hero-subtitle{
+        text-align: start;
+        color: #000;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.375rem;
+    }
+    .mark1{
+        background: linear-gradient(92deg, #FF9532 57%, #FE5A69 72%, #F657BC 88%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 2.775rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 103%
+    }
+
+    .search-links-container {
+        margin-top: 1rem;
+        margin-left: 0rem;
+        margin-bottom: 0; 
+    }
+
+    .search-container {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .search-links a{
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.125rem; /* 150% */
+    }
+    .search-input {width: 75%;}
+    .search-suffix{
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .search-button {
+        width: 25%;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 15px 25px;
+    }
+    /**/
+    .section-titleCard{
+        font-size: 2.25rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 2.4625rem;
+    }
+    .why-section-title{
+        font-size: 2.25rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 2.4625rem;
+    }
+    .why-icon{
+        width: 2.30288rem;
+        height: 2.304rem;
+        flex-shrink: 0;
+    }
+    .h4-new{
+        font-family: "Wix Madefor Text";
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 1.625rem;
+    }
+    .text-muted{
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.125rem;
+    }
+    .highlight-text .a-highlight .dot-highlight .gradient-text{
+        font-size: 2.25rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 2.4625rem; 
+    }
+    .search-button1{
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .search-suffix1{
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .search-links1 a{
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .search-links1 a img{
+        padding-right: 0.5rem;
+    }
+    .card{
+        width: 17.84906rem !important;
+    }
+    .more-stories{
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+    }
+    .custom-card {padding: 0.5rem; }
+    .card-image {height: 35%;}
+    .custom-card-title {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .custom-card-title2 {font-size: 1rem;}
+    .custom-card-text {font-size: 0.7rem;}
+    .custom-button {padding: 0.1rem;}
+
+    .footer-row-2{margin-top: 3rem !important;}
+}
+/*------------------------------------------------------------------------------------------*/
+@media (max-width: 320px){
+    .hero-img.left, .hero-img.right {
+        max-height: 110px;
+        width: 90%;
+    }
+    .rectangleLijevo, .rectangleDesno {
+        width: 90%;
+        min-height: 280px;
+    }
+    .section-titleCard{font-size: 2.3rem;}
+    .why-section-title{font-size: 2.3rem;}
+    .card-image{height: 40% !important ; }
+}
+/*------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 320px) and (max-width: 767px){
+    .hero-section{
+        height: auto;
+        padding-top: 10rem;
+    }
+    .hero-section .col-6:nth-child(1) {margin-top: 15rem;}
+    .hero-section .col-6:nth-child(3) {margin-top: 15rem;}
+    .hero-title{font-size: 2.5rem;  }
+    .gradient-text{font-size: 2.5rem;}
+    /*---------------------------------------------------------------------*/
+
+    .meFor .slick-prev,
+    .meFor .slick-next { /*velicina strelica*/
+        width: 45px;
+        height: 45px;
+        transform: translateY(-50%);
+    }
+        
+    .meFor .col-6 {
+        padding-right: 13px;
+    }
+
+    .custom-card-ME{padding: 0.75rem;}
+    .custom-card-ME h4 {
+        font-size: clamp(0.7rem, 4vw, 2.2rem);
+        line-height: 0.975rem;
+    }
+    .vector-icon {max-width: 0.9rem;}
+    
+    /*-------------------------------------------------------------------------*/
+
+    .why-section-title{width: clamp(75%, 77%, 80%);}
+    
+    .a-highlight{ /*da a postane ovaj gradijent*/
+        background: linear-gradient(88deg, #FF9532 28.03%, #FE5A69 43.4%, #F657BC 59.88%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .dot-highlight{ /*da tacka bude ove boje*/
+        color: #F910A9;
+    }
+    .gradient-text{/*da uklonimo postojeci gradijent i postavimo crnu boju!*/
+        background: none;
+        -webkit-text-fill-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    /*----------------slajder-------*/
+    .card{
+        width: 95%;
+    }
+    .successContainer .slick-prev,
+    .successContainer .slick-next { /*velicina strelica*/
+        width: 45px;
+        height: 45px;
+        transform: translateY(-50%);
+    }
+    
+    .successContainer .slick-prev {
+        left: 8px;
+    }
+    
+    .successContainer .slick-next {
+        right: 8px;
+    }
+    
+    .successContainer .slick-dots {
+        bottom: -20px;
+    }
+        
+    .successContainer .col-md-4 {
+        padding: 0 2px;
+    }
+    
+    .card {
+        margin: 0 0 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .card-body {
+        padding: 1rem;
+        min-height: 180px;
+    }
+    
+    .success-title {
+        font-size: clamp(1.9rem, 6vw, 2.5rem);
+        padding: 0 0.5rem;
+    }
+    
+    .explore {
+        margin-top: 1.2rem;
+        font-size: clamp(1rem, 3.5vw, 1.2rem);
+        margin-bottom: 1.2rem;
+    }
+    
+    .more-stories {margin-top: 1.8rem; font-size: 1rem;}
+    /*--------------------------*/
+    .custom-card {
+        padding: 0.7rem;
+        height: 12.5rem; 
+    }
+    .card-image {height: 50%;}
+    .custom-card-title {
+        font-size: 0.7rem;
+        line-height: 0.6rem
+    }
+    .custom-card-title2 {font-size: 0.7rem;}
+    .custom-card-text {font-size: 0.5rem;}
+    
+    .custom-button {
+        font-size: 0.7rem;
+        width: 5rem;
+        height: 2rem;
+        padding: 0.3rem;
+    }
+    /*-----------------------*/
+    .subscribe-input{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .subscribe-btn{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .footer{ /*jer je desktop footer prelazio preko footer pa sam na ovaj nacin napravio taj dodatni spejsing!*/
+        margin-top: 6rem;
+        padding-top: 14rem;
+    }
+    .footerLink{
+        margin-right: 1rem;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------*/
