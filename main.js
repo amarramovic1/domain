@@ -5,10 +5,10 @@ $(document).ready(function(){
     if ($(window).width() < 768) {
       // inicijalizuje slick ako već nije
       
-      if (!$('.row.mt-4.g-4').hasClass('slick-initialized')) {
-        $('.row.mt-4.g-4').slick({
-          dots: true, //aktivira tačkice za navigaciju ispod slidera
-          arrows: true, //strelice - sledeci/prethodni slajd
+      if (!$('.row.success-row.g-4').hasClass('slick-initialized')) {
+        $('.row.success-row.g-4').slick({
+          dots: false, //aktivira tačkice za navigaciju ispod slidera
+          arrows: false, //strelice - sledeci/prethodni slajd
           infinite: true, //beskonacno listanje
           speed: 300,
           slidesToShow: 1,
@@ -28,8 +28,8 @@ $(document).ready(function(){
     } else {
       // ako slick postoji i širina ekrana je veća od 768px, deaktivira slick
       
-      if ($('.row.mt-4.g-4').hasClass('slick-initialized')) {
-        $('.row.mt-4.g-4').slick('unslick');
+      if ($('.row.success-row.g-4').hasClass('slick-initialized')) {
+        $('.row.success-row.g-4').slick('unslick');
       }
     }
   }
@@ -44,8 +44,8 @@ $(document).ready(function(){
   
   // dodatna funkcija za postavljanje pozicije nakon resize
   $(window).on('resize', function() {
-    if ($('.row.mt-4.g-4').hasClass('slick-initialized')) {
-      $('.row.mt-4.g-4').slick('setPosition');
+    if ($('.row.success-row.g-4').hasClass('slick-initialized')) {
+      $('.row.success-row.g-4').slick('setPosition');
     }
   });
 
@@ -56,8 +56,8 @@ $(document).ready(function(){
     if ($(window).width() < 768) {
       // inicijalizuje slick ako već nije
       
-      if (!$('.row.mt-3.custom-gutters').hasClass('slick-initialized')) {
-        $('.row.mt-3.custom-gutters').slick({
+      if (!$('.row.custom-gutters').hasClass('slick-initialized')) {
+        $('.row.custom-gutters').slick({
           infinite: true, //beskonacno listanje
           speed: 300,
           slidesToShow: 2,
@@ -93,8 +93,8 @@ $(document).ready(function(){
     } else {
       // ako slick postoji i širina ekrana je veća od 768px, deaktivira slick
       
-      if ($('.row.mt-3.custom-gutters').hasClass('slick-initialized')) {
-        $('.row.mt-3.custom-gutters').slick('unslick');
+      if ($('.row.custom-gutters').hasClass('slick-initialized')) {
+        $('.row.custom-gutters').slick('unslick');
       }
       
       //sledeci red
@@ -110,8 +110,8 @@ $(document).ready(function(){
   $(window).on('resize', function() {
     newSlick();
 
-    if ($('.row.mt-3.custom-gutters').hasClass('slick-initialized')) {
-      $('.row.mt-3.custom-gutters').slick('setPosition');
+    if ($('.row.custom-gutters').hasClass('slick-initialized')) {
+      $('.row.custom-gutters').slick('setPosition');
     }
     //sledeci red
     if ($('.row.custom-gutters.mt-1').hasClass('slick-initialized')) {
